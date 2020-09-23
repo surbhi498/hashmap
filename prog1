@@ -21,15 +21,45 @@ Sample Output 2 :
 1
 
 
-
+#include <bits/stdc++.h> 
+using namespace std; 
 int highestFrequency(int *input, int n){	 
 		
 	/* Don't write main().
      	* the input array is already passed as function argument.
      	* Taking input and printing output is handled automatically.
      	*/
-     	
-     	
+     	unordered_map<int,int> m;
+	 for(int i = 0 ; i < n ; i++){
+            
+                m[input[i]] += 1;
+        }
+	int max1 = INT_MIN;
+	int res;
+	auto it1 = m.begin();
+	while(it1 != m.end())
+	{
+	
+	
+	if(it1->second>max1)
+	{
+	
+	res = it1->first;
+	max1 = it1->second;
+        
+     	}
      	
  	}
+
+return res;
+
+
+}
+
+
+
+
+
+
+
 
