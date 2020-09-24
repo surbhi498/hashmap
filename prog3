@@ -37,7 +37,7 @@ void pairSum(int *input, int n)
     if(m.find(res) != m.end()){
     int count = m[res];
     for(int b = 0;b<count;b++){
-    cout<<input[i]<<" "<<res<<endl;
+    cout<<res<<" "<<input[i]<<endl;
     
     
     
