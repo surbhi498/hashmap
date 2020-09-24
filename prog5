@@ -69,7 +69,7 @@ k++;
 }
 if(maxlen<len){
 
-start = arr[j]-k-1;
+start = arr[j]-(k-1);
 
 }
 maxlen = max(len,maxlen);
@@ -98,7 +98,7 @@ while(maxlen != 0)
 {
 output.push_back(start);
 start++; 
-
+maxlen--;
 
 
 }
