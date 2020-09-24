@@ -29,8 +29,74 @@ Sample Output 2 :
 4 4
 4 4
 4 4
+#include <iostream>
+#include <unordered_set>
+#include <algorithm>
+using namespace std;
 void printPairs(int *input, int n, int k) {
 	// Write your code here
+	unordered_map<int,int> mp;
+	int f;
+	int c;
+	int p;
+	int l;
+	int m;
+	for(int i =0;i<n;i++)
+	{
+	
+	mp[input[i]]++;
+	
+	}
+	
+	for(auto i : mp)
+	{
+
+	if(i.second != 0)
+	{
+	c = i.second;
+	if (mp.find(i.first - k) != mp.end())
+	{
+	
+	f = (i.first-k).second;
+	p = f*c;
+	while(p != 0){
+	
+	cout<<(i.first-k)<<" "<<i.first<<endl;
+	p--;
+	
+	
+	
+	}
+	(i.first-k).second = 0;
+	}
+	if(mp.find(i.first + k) != mp.end())
+	{
+	m = (i.first + k).second;
+	l = c*m;
+	while(l != 0){
+	
+	
+	cout<<(i.first)<<" "<<(i.first + k)<<endl;
+	l--;
+	
+	
+	}
+	
+	
+	(i.first+k).second = 0;
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	}
+	
+	i.second = 0;
+	}
 
 }
 
