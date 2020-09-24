@@ -15,7 +15,31 @@ Sample Input 2 :
 abcde
 Sample Output 2 :
 abcde
+#include <bits/stdc++.h> 
+#include <stdio.h>
+using namespace std;  
+# define NO_OF_CHARS 256  
+# define bool int  
 char* uniqueChar(char *str){
     // Write your code here
+     //bool bin_hash[NO_OF_CHARS] = {0};  
+    unordered_map<char,int> mp;
+    int index =0;
+    //vector<char> nm;
+    for(int j=0;j<len(str);j++)
+    {
+    if(mp[str[i]==0){
+    str[index++] = str[i];
+     mp[str[i]]++; 
+    
+    }
+   
+    
+    
+    }
+    
+    return s;
+    
+    
 
 }
